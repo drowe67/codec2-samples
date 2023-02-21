@@ -16,4 +16,4 @@ AMBE and some other commercial codecs (e.g. MELP) do pass low frequencies quite 
 
 Try listening to them through a small loudspeaker, such as a laptop, as well as good quality headphones.
 
-Sample 5 is an experimental candidate for a new 2400 bit/s mode, using a 3 stage VQ of rate K re-sampled log spectra from the dr-paper branch 9c78ca81.  It would be roughly 1900 bit/s when fully quantised.
+Sample 5 is an experimental candidate for a new 2400 bit/s mode, using a 3 stage VQ of rate K re-sampled log spectra from the `dr-papr` branch 9c78ca81 (`230204_three_dec experiment` in `ratek_resampler.sh`).  The spectrum is quantised with 27 bits every 20ms, or 1350 bits/s. It would be roughly 1900 bit/s when the side information (pitch and energy) is fully quantised.
