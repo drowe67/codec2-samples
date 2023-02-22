@@ -1,12 +1,12 @@
 # Codec 2 Samples
 
-A repo to capture snapshots of Codec 2 samples, used for informal listening tests and as a record as the codec evolves.
+A repo to capture snapshots of Codec 2 samples, together with refernce samples from COTs codecs. Used for informal listening tests and as a record as the codec evolves.  
 
 To listen to them on my Ubuntu Linux machine I arrange them in file browser window with all samples from one speaker on the same row, and [click on each file](https://www.rowetel.com/?p=7884) to play.
 
 ![file browser](file_browser.png)
 
-# 230217 - AMBE and Codec 2 at 2400 bits/s
+# 230221 - AMBE and Codec 2 at 2400 bits/s
 
 Using just two demo samples from the DVSI web site.  It would be nice to augment these with AMBE samples processed from independent source material.
 
@@ -17,3 +17,7 @@ AMBE and some other commercial codecs (e.g. MELP) do pass low frequencies quite 
 Try listening to them through a small loudspeaker, such as a laptop, as well as good quality headphones.
 
 Sample 5 is an experimental candidate for a new 2400 bit/s mode, using a 3 stage VQ of rate K re-sampled log spectra from the `dr-papr` branch 9c78ca81 (`230204_three_dec experiment` in `ratek_resampler.sh`).  The spectrum is quantised with 27 bits every 20ms, or 1350 bits/s. It would be roughly 1900 bit/s when the side information (pitch and energy) is fully quantised.
+
+# 230221 - MELPe, TWELP and Codec 2 at 1200 and 600/700 bits/s
+
+MELPe and TWELP samples from the DSP Innovations web site.
