@@ -10,14 +10,21 @@ To listen to them on my Ubuntu Linux machine I arrange them in file browser wind
 
 Using just two demo samples from the DVSI web site.  It would be nice to augment these with AMBE samples processed from independent source material.
 
-Codec 2 is designed for digital radio applications that use small speakers (e.g. a HF radio or walkie talkie).  The loudspeakers in these radios do not pass low frequencies, with typical -3dB points of 300-500Hz.  Many analog radio systems (SSB and FM) filter speech between 300 and 3000 Hz.  Arguably there is no point in spending bits to preserve these frequencies.  The LPC modelling used in the 1200-3200 Codec 2 modes struggle with low frequency, sometimes leading to unpleasant artefacts. We are therefore proposing to add a high pass filter to Codec 2 to define it's frequency response to match our use case.
-
-AMBE and some other commercial codecs (e.g. MELP) do pass low frequencies quite well.  This can make them sound preferable when using a wide frequency response loudspeaker or good quality headphones.  So this set of samples includes AMBE with and without a 200Hz (-6dB) cut off high pass filter to simulate using a small loudspeaker.
+Codec 2 is designed for digital radio applications that use small speakers (e.g. a HF radio or walkie talkie).  The loudspeakers in these radios do not pass low frequencies, with typical -3dB points of 300-500Hz.  Many analog radio systems (SSB and FM) filter speech between 300 and 3000 Hz.  These frequencies are not required for intelligable speech (e.g. telephone networks remove them). Arguably there is no point in spending precious bits to preserve these frequencies.  The LPC modelling used in the current 1200-3200 Codec 2 modes struggle with low frequencies, sometimes leading to unpleasant artefacts.  We are therefore proposing to add a high pass filter to Codec 2 to define it's frequency response to match our use case.
+ 
+AMBE and other commercial codecs (e.g. MELP and TWELP) have been designed to encode low frequencies.  This can make them sound preferable when using a wide frequency response loudspeaker or good quality headphones, in particular with male speakers that have significant low frequency energy.  So this set of samples includes AMBE with and without a 200Hz (-6dB) cut off high pass filter to simulate using a small loudspeaker.
 
 Try listening to them through a small loudspeaker, such as a laptop, as well as good quality headphones.
 
-Sample 5 is an experimental candidate for a new 2400 bit/s mode, using a 3 stage VQ of rate K re-sampled log spectra from the `dr-papr` branch 9c78ca81 (`230204_three_dec experiment` in `ratek_resampler.sh`).  The spectrum is quantised with 27 bits every 20ms, or 1350 bits/s. It would be roughly 1900 bit/s when the side information (pitch and energy) is fully quantised.
+Sample 5 is an experimental candidate for a new 2400 bit/s mode, using a 3 stage VQ of the re-sampled log spectra from the `dr-papr` branch 9c78ca81 (`230204_three_dec experiment` in `ratek_resampler.sh`).  The spectrum is quantised with 27 bits every 20ms, or 1350 bits/s. It would be roughly 1900 bit/s when the side information (pitch and energy) is fully quantised.
 
 # 230221 - MELPe, TWELP and Codec 2 at 1200 and 600/700 bits/s
 
-MELPe and TWELP samples from the DSP Innovations web site.
+MELPe and TWELP samples from the DSP Innovations web site.  The COTs codecs try to code the full 4 kHz, whereas the Codec 2 samples have a 200 Hz (-6dB) High Pass Filter as discussed above. The COTs codec samples have been left unfiltered in these examples.  Especially at low bit rates, we feel it is efficient to allocate bits to parts of the spectrum that will actually leave the loudspeaker in a typical use case.
+
+Sample 5 in `230422_1200` uses an experimental 3 stage VQ to quantised with 27 bits every 30ms (900 bits/s), which with side information (pitch and energy) would result in a 1200 bits/s codec.
+
+Sample 5 in the `230422_600` uses a single stage 12 bit VQ updated every 30ms to quantise the spectrum at 400 bits/s.  With side information (pitch and energy) a candidate 600-700 bits/s codec.
+
+
+
