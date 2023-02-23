@@ -26,6 +26,6 @@ Sample 5 in `230422_1200` uses an experimental 3 stage VQ to quantised with 27 b
 
 Sample 5 in the `230422_600` uses a single stage 12 bit VQ updated every 30ms to quantise the spectrum at 400 bits/s.  With side information (pitch and energy) a candidate 600-700 bits/s codec.
 
-Sample 6 in both directories is a rough simulation of SSB in an AWGN channel, about 20dB SNR for the 1200 directory, and 8dB for the 600 directory, which also includes a simulation of impulse noise.  Both SSB signals are compressed.  Very high SNR SSB (e.g. several S points above the noise) is effectively the codec input source material - this will be very hard to beat as model based codecs always introduce artefacts due to approximations in the model.  At high SNR it will come down to personal preference - those who tolerate the codec artefacts versus those who prefer the analog signal with it's background noise.
+Sample 6 in both directories is a rough simulation of SSB in an AWGN channel, about 20dB SNR for the 1200 directory, and 8dB for the 600 directory, which also includes a simulation of impulse noise.  Both SSB signals are (Hilbert) compressed.  Very high SNR SSB (e.g. several S points above the noise) is effectively the codec input source material - this will be very hard to beat as model based codecs always introduce artefacts due to approximations in the model.  At high SNR it will come down to personal preference - those who tolerate the codec artefacts versus those who prefer the analog signal with it's background noise.
 
 
