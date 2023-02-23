@@ -1,6 +1,6 @@
 # Codec 2 Samples
 
-A repo to capture snapshots of Codec 2 samples, together with refernce samples from COTs codecs. Used for informal listening tests and as a record as the codec evolves.  
+A repo to capture snapshots of Codec 2 samples, together with refernece samples from COTs codecs. Used for informal listening tests and as a record as the codec evolves.  
 
 To listen to them on my Ubuntu Linux machine I arrange them in file browser window with all samples from one speaker on the same row, and [click on each file](https://www.rowetel.com/?p=7884) to play.
 
