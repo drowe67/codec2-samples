@@ -22,9 +22,9 @@ Sample 5 is an experimental candidate for a new 2400 bit/s mode, using a 3 stage
 
 MELPe and TWELP samples from the DSP Innovations web site.  The COTs codecs try to code the full 4 kHz, whereas the Codec 2 samples have a 200 Hz (-6dB) High Pass Filter as discussed above. The COTs codec samples have been left unfiltered in these examples.  Especially at low bit rates, we feel it is efficient to allocate bits to parts of the spectrum that will actually leave the loudspeaker in a typical use case.
 
-Sample 5 in `230422_1200` uses an experimental 3 stage VQ to quantised with 27 bits every 30ms (900 bits/s), which with side information (pitch and energy) would result in a 1200 bits/s codec.
+Sample 5 in `230222_1200` uses an experimental 3 stage VQ to quantised with 27 bits every 30ms (900 bits/s), which with side information (pitch and energy) would result in a 1200 bits/s codec.
 
-Sample 5 in the `230422_600` uses a single stage 12 bit VQ updated every 30ms to quantise the spectrum at 400 bits/s.  With side information (pitch and energy) a candidate 600-700 bits/s codec.
+Sample 5 in the `230222_600` uses a single stage 12 bit VQ updated every 30ms to quantise the spectrum at 400 bits/s.  With side information (pitch and energy) a candidate 600-700 bits/s codec.
 
 Sample 6 in both directories is a rough simulation of SSB in an AWGN channel, about 20dB SNR for the 1200 directory, and 8dB for the 600 directory, which also includes a simulation of impulse noise.  Both SSB signals are (Hilbert) compressed.  Very high SNR SSB (e.g. several S points above the noise) is effectively the codec input source material - this will be very hard to beat as model based codecs always introduce artefacts due to approximations in the model.  At high SNR it will come down to personal preference - those who tolerate the codec artefacts versus those who prefer the analog signal with it's background noise.
 
